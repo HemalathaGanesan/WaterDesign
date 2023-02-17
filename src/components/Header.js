@@ -7,56 +7,36 @@ import {
   useTheme,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import useStyles from './ui/Style'
+import useStyles from "./ui/Style";
 
 const Header = () => {
   const classes = useStyles();
   // const theme = useTheme();
   // const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    // <Grid container>
-    //   <AppBar>
-    //     <Toolbar>
-    //       <Typography varient='h3' className={classes.title}>
-    //         Water design Eng
-    //       </Typography>
-    //       {isMobile ? (
-    //         <DrawerComponent />
-    //       ) : (
-    //         <div className={classes.navLinks}>
-    //           <Link to='/' className={classes.link}>
-    //             Home
-    //           </Link>
-    //           <Link to='/' className={classes.link}>
-    //             About
-    //           </Link>
-    //           <Link to='/' className={classes.link}>
-    //             Services
-    //           </Link>
-    //           <Link to='/' className={classes.link}>
-    //             Industries
-    //           </Link>
-    //           <Link to='/' className={classes.link}>
-    //             Contact
-    //           </Link>
-    //         </div>
-    //       )}
-    //     </Toolbar>
-    //   </AppBar>
-    // </Grid>
     <AppBar
       position='static'
       color='rgb(10, 25, 41)'
       elevation={0}
       className={classes.head}
-      sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
+      // sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
     >
       <Toolbar sx={{ flexWrap: "wrap" }} className={classes.toolbar}>
         <Typography variant='h6' color='inherit' noWrap sx={{ flexGrow: 1 }}>
           Water Design Eng
         </Typography>
-        <nav >
-          <Link className={classes.navItems}
+        <nav>
+          <Link
+            className={classes.navItems}
+            variant='button'
+            color='text.primary'
+            href='#'
+            sx={{ my: 1, mx: 1.5 }}
+          >
+            Home
+          </Link>
+          <Link
+            className={classes.navItems}
             variant='button'
             color='text.primary'
             href='#'
@@ -64,7 +44,8 @@ const Header = () => {
           >
             Industries
           </Link>
-          <Link className={classes.navItems}
+          <Link
+            className={classes.navItems}
             variant='button'
             color='text.primary'
             href='#'
@@ -72,13 +53,23 @@ const Header = () => {
           >
             Services
           </Link>
-          <Link className={classes.navItems}
+          <Link
+            className={classes.navItems}
             variant='button'
             color='text.primary'
             href='#'
             sx={{ my: 1, mx: 1.5 }}
           >
             About Us
+          </Link>
+          <Link
+            className={classes.navItems}
+            variant='button'
+            color='text.primary'
+            href='#'
+            sx={{ my: 1, mx: 1.5 }}
+          >
+            Contact Us
           </Link>
         </nav>
       </Toolbar>

@@ -10,48 +10,71 @@ import ArrowRightAlt from "@material-ui/icons/ArrowRightAlt";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import useStyles from "./ui/Style";
-
+import { useNavigate } from "react-router-dom";
+import { CardMedia } from "@material-ui/core";
+import img1 from "../assets/images/pipe2.jpg";
+import img2 from "../assets/images/pipe3.jpg";
+import img3 from "../assets/images/pipe.jpg";
+import img4 from "../assets/images/pipe41.jpg";
 const tiers = [
   {
-    title: "Services",   
+    title: "Services",
     description: `We offer multiple services that gives max level approach to the users who can get the most benifits out of it.
     we offer multiple design to check the pipe designs`,
-    buttonText: "Read More",   
-  },
-  {
-    title: "Industries",    
-    description: `We offer multiple services that gives max level approach to the users who can get the most benifits out of it.
-    we offer multiple design to check the pipe designs`,
-    buttonText: "Read More"
-  
-  },
-  {
-    title: "About us",   
-    description: `We offer multiple services that gives max level approach to the users who can get the most benifits out of it.
-    we offer multiple design to check the pipe designs`,   
     buttonText: "Read More",
+    image: img2,
+  },
+  {
+    title: "Industries",
+    description: `We offer multiple services that gives max level approach to the users who can get the most benifits out of it.
+    we offer multiple design to check the pipe designs`,
+    buttonText: "Read More",
+    image: img4,
+  },
+  {
+    title: "About us",
+    description: `We offer multiple services that gives max level approach to the users who can get the most benifits out of it.
+    we offer multiple design to check the pipe designs`,
+    buttonText: "Read More",
+    image: img3,
+  },
+  {
+    title: "About us",
+    description: `We offer multiple services that gives max level approach to the users who can get the most benifits out of it.
+    we offer multiple design to check the pipe designs`,
+    buttonText: "Read More",
+    image: img2,
+  },
+  {
+    title: "About us",
+    description: `We offer multiple services that gives max level approach to the users who can get the most benifits out of it.
+    we offer multiple design to check the pipe designs`,
+    buttonText: "Read More",
+    image: img1,
   },
 ];
 
 const Services = () => {
   const classes = useStyles();
+  const navigate = useNavigate();
+
   return (
-    <Container maxWidth='md' component='main' className={classes.service}>
-      <Grid container spacing={5} alignItems='flex-end'>
+    <Container maxWidth='lg' component='main' className={classes.service}>
+      <div className={classes.scroll}>
         {tiers.map((tier) => (
-          // Enterprise card is full width at sm breakpoint
           <Grid
             item
             key={tier.title}
             xs={12}
             // sm={tier.title === "Enterprise" ? 12 : 6}
             md={4}
+            style={{ height: "500px", margin: "30px" }}
           >
-            <Card>
+            <Card className={classes.card}>
               <CardHeader
                 title={tier.title}
                 subheader={tier.subheader}
-                titleTypographyProps={{ align: "center" }}               
+                titleTypographyProps={{ align: "center" }}
                 subheaderTypographyProps={{
                   align: "center",
                 }}
@@ -62,6 +85,12 @@ const Services = () => {
                       : theme.palette.grey[700],
                 }}
               />
+              <CardMedia
+                style={{ height: 200, width: 400 }}
+                image={tier.image}
+                title={tier.title}
+              />
+
               <CardContent>
                 <Box
                   sx={{
@@ -69,25 +98,31 @@ const Services = () => {
                     justifyContent: "center",
                     alignItems: "baseline",
                     mb: 2,
-                  }}                  
-                >    
-                 <Typography                     
-                      variant='subtitle1'
-                     // align='center'
-                      >
-                      {tier.description}
-                    </Typography>              
-                </Box>                               
+                  }}
+                >
+                  <Typography
+                    variant='subtitle1'
+                    // align='center'
+                  >
+                    {tier.description}
+                  </Typography>
+                </Box>
               </CardContent>
+
               <CardActions>
-                <Button fullWidth>
+                <Button
+                  fullWidth
+                  onClick={() => {
+                    navigate("service");
+                  }}
+                >
                   {tier.buttonText} <ArrowRightAlt />
                 </Button>
               </CardActions>
             </Card>
           </Grid>
         ))}
-      </Grid>
+      </div>
     </Container>
   );
 };

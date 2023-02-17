@@ -2,16 +2,11 @@ import { Typography, Link } from "@material-ui/core";
 import useStyles from "./ui/Style";
 
 const Copyright = () => {
-  const classes=useStyles()
+  const classes = useStyles();
   return (
-    <Typography className={classes.copyRight}
-      variant='body2'     
-      align='center'
-      sx={{ mt: 5 }}
-    >
+    <Typography className={classes.copyRight} align='center'>
       {"Copyright © "}
-      {new Date().getFullYear()}
-      {" "} 
+      {new Date().getFullYear()}{" "}
       <Link color='inherit' href='https://mui.com/'>
         Water Design Eng.
       </Link>

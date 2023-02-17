@@ -1,40 +1,22 @@
 import * as React from "react";
-<<<<<<< HEAD
-import { BrowserRouter } from "react-router-dom";
-=======
 import { BrowserRouter, Routes, Route } from "react-router-dom";
->>>>>>> origin/features
 import Header from "./components/Header";
 import Description from "./components/Description";
 import { CssBaseline } from "@material-ui/core";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
-<<<<<<< HEAD
-import Copyright from './components/Copyright'
-import Home from './components/home'
-=======
 import Copyright from "./components/Copyright";
 import ServicesPage from "./pages/ServicesPage";
->>>>>>> origin/features
 
 function App() {
   const counter = {
     count: 0,
-<<<<<<< HEAD
-    incrementCounter: function() {
-      console.log(this);
-      this.count++;
-    }
-  }
-counter.incrementCounter()
-=======
     incrementCounter: function () {
       console.log(this);
       this.count++;
     },
   };
   counter.incrementCounter();
->>>>>>> origin/features
   return (
     <BrowserRouter>
       <React.Fragment>

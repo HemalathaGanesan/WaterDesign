@@ -29,11 +29,9 @@ counter.incrementCounter()
         <Description />
         <Services />
         <Footer />
-        <Copyright />
-        
+        <Copyright />      
       </React.Fragment>
     </BrowserRouter>
-  );
-}
+  )}
 
 export default App;

@@ -8,6 +8,7 @@ import {
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import useStyles from "./ui/Style";
+import LogoImage from "../assets/images/logo.png";
 
 const Header = () => {
   const classes = useStyles();
@@ -22,16 +23,25 @@ const Header = () => {
       // sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
     >
       <Toolbar sx={{ flexWrap: "wrap" }} className={classes.toolbar}>
-        <Typography variant='h6' color='inherit' noWrap sx={{ flexGrow: 1 }}>
-          Water Design Eng
-        </Typography>
-        <nav>
+        <div style={{ width: "55%", display: "flex" }}>
+          <img
+            src={LogoImage}
+            alt='Water Design Engg'
+            style={{ width: "5%", marginRight: "10px" }}
+          />
+          <Typography variant='h6' color='inherit' noWrap sx={{ flexGrow: 1 }}>
+            Water Design Engg
+          </Typography>
+        </div>
+
+        <nav style={{ width: "45%" }}>
           <Link
             className={classes.navItems}
             variant='button'
             color='text.primary'
             href='#'
             sx={{ my: 1, mx: 1.5 }}
+            to='/'
           >
             Home
           </Link>
@@ -39,16 +49,16 @@ const Header = () => {
             className={classes.navItems}
             variant='button'
             color='text.primary'
-            href='#'
+            to='/vision'
             sx={{ my: 1, mx: 1.5 }}
           >
-            Industries
+            Vision & Mission
           </Link>
           <Link
             className={classes.navItems}
             variant='button'
             color='text.primary'
-            href='#'
+            to='/service'
             sx={{ my: 1, mx: 1.5 }}
           >
             Services
@@ -57,7 +67,7 @@ const Header = () => {
             className={classes.navItems}
             variant='button'
             color='text.primary'
-            href='#'
+            to='/aboutus'
             sx={{ my: 1, mx: 1.5 }}
           >
             About Us
@@ -66,7 +76,7 @@ const Header = () => {
             className={classes.navItems}
             variant='button'
             color='text.primary'
-            href='#'
+            to='/contact'
             sx={{ my: 1, mx: 1.5 }}
           >
             Contact Us

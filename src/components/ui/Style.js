@@ -1,6 +1,7 @@
 import { makeStyles } from "@material-ui/core";
 import background from "../../assets/images/pipe2.jpg";
 import footerImage from "../../assets/images/pipe5.jpg";
+import { hover } from "@testing-library/user-event/dist/hover";
 
 const useStyles = makeStyles((theme) => ({
   navLinks: {
@@ -24,8 +25,9 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
     boxShadow: "none",
-    backgroundImage: "none",
-    backgroundColor: "rgb(135, 177, 181,0.8)",
+    backgroundImage:
+      "linear-gradient(rgb(135, 177, 181,0.8),rgb(71, 81, 82,0.8))",
+    // backgroundColor: "rgb(135, 177, 181,0.8)",
     display: "flex",
     flexDirection: "column",
     width: "100%",
@@ -57,6 +59,89 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
   },
+  about: {
+    // position: "relative",
+    width: "100%",
+    height: "58vh",
+    marginTop: "30px",
+    // backgroundPosition: "center",
+    // backgroundRepeat: "no-repeat",
+    //backgroundSize: "cover",
+    //background: `linear-gradient(rgb(170 236 227 / 80%),rgb(0, 30, 60,0.8 )), url(${background})`,
+    // display: "flex",
+    // justifyContent: "center",
+    // alignItems: "center",
+    textAlign: "center",
+  },
+
+  aboutTitle: {
+    marginBottom: "50px",
+  },
+  aboutText: {
+    fontSize: "1.5rem",
+    //fontWeight: 500,
+    //paddingTop: "15px",
+    lineHeight: 1.3,
+    letterSpacing: 0,
+    textAlign: "left",
+    width: "78%",
+    margin: "0 auto",
+    height: " 145px",
+    color: "#6b6969",
+    fontFamily: "serif",
+  },
+  servicePageDiv: {
+    width: "100%",
+    display: "flex",
+    justifyContent: "space-evenly",
+  },
+  servicePageCard: {
+    height: "43vh",
+    //width: "30vw",
+  },
+  contactContainer: {
+    height: "63vh",
+    width: "100%",
+    // marginBottom: "1vh",
+  },
+
+  contact: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    marginTop: "2vh",
+    marginBottom: "1vh",
+    // height: "10vh",
+  },
+  contactText: {
+    display: "flex",
+  },
+  contactIcon: {
+    marginRight: "0.5vw",
+    marginTop: "-0.3vh",
+  },
+  enquirey: {
+    display: "flex",
+    flexDirection: "column",
+  },
+  contactForm: {
+    display: "flex",
+    flexDirection: "column",
+  },
+  formField: {
+    margin: "1.1vw !important",
+  },
+  formInput: {
+    width: "25vw",
+  },
+  contactButton: {
+    width: "8vw",
+    color: "#fff !important",
+    backgroundColor: "darkblue !important",
+    "&:hover": {
+      backgroundColor: "darkblue !important",
+      color: "#fff !important",
+    },
+  },
 
   desText: {
     fontSize: "2.2rem",
@@ -85,6 +170,7 @@ const useStyles = makeStyles((theme) => ({
       background: "linear-gradient(rgb(170 236 227 / 80%),rgb(0, 30, 60,0.8 ))",
     },
   },
+
   footer: {
     //backgroundImage: `url(${footerImage})`,
     position: "relative",
@@ -101,6 +187,7 @@ const useStyles = makeStyles((theme) => ({
   },
   footerText: {
     color: "black",
+    textDecoration: "none",
   },
   footerSubText: {
     color: "White",

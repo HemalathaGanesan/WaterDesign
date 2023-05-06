@@ -1,11 +1,10 @@
 import { Container, Grid, Icon, Typography } from "@material-ui/core";
-import Link from "@material-ui/core/Link";
+import { Link } from "react-router-dom";
 import useStyles from "./ui/Style";
 import PhoneEnabledIcon from "@material-ui/icons/PhoneEnabled";
 import Place from "@material-ui/icons/Place";
 import Mail from "@material-ui/icons/Mail";
 import ArrowRightAlt from "@material-ui/icons/ArrowRightAlt";
-import Instagram from "@material-ui/icons/Instagram";
 import Copyright from "./Copyright";
 
 const iconStyle = { marginBottom: "-2px", fontSize: "1rem" };
@@ -13,18 +12,36 @@ const footers = [
   {
     title: "Quick Links",
     description: [
-      { name: "About Us", icon: <ArrowRightAlt style={iconStyle} /> },
-      { name: "Services", icon: <ArrowRightAlt style={iconStyle} /> },
-      { name: "Contact us", icon: <ArrowRightAlt style={iconStyle} /> },
-      { name: "Industries", icon: <ArrowRightAlt style={iconStyle} /> },
+      { name: "Home", icon: <ArrowRightAlt style={iconStyle} />, url: "/" },
+      {
+        name: "About Us",
+        icon: <ArrowRightAlt style={iconStyle} />,
+        url: "/aboutus",
+      },
+      {
+        name: "Services",
+        icon: <ArrowRightAlt style={iconStyle} />,
+        url: "/service",
+      },
+      {
+        name: "Vision & Mission",
+        icon: <ArrowRightAlt style={iconStyle} />,
+        url: "/vision",
+      },
+      {
+        name: "Contact us",
+        icon: <ArrowRightAlt style={iconStyle} />,
+        url: "contact",
+      },
     ],
   },
   {
     title: "Address",
     description: [
       {
-        name: `122/a- Basthi,
-      Avalappalli Hudco,Hosur-635109 `,
+        name: `MI133, Ragavendra Colony,
+        Avalappalli Hudco,
+        Basthi,Hosur-635109 `,
         icon: <Place style={iconStyle} />,
       },
     ],
@@ -32,8 +49,8 @@ const footers = [
   {
     title: "Contact",
     description: [
-      { name: "8870007744", icon: <PhoneEnabledIcon style={iconStyle} /> },
-      { name: "wde@gmail.com", icon: <Mail style={iconStyle} /> },
+      { name: "+91 8778859955", icon: <PhoneEnabledIcon style={iconStyle} /> },
+      { name: "waterdesignengg@gmail.com", icon: <Mail style={iconStyle} /> },
     ],
   },
   // {
@@ -66,9 +83,11 @@ const Footer = () => {
                 {footer.description.map((item) => (
                   <li key={item} className={classes.footerSubText}>
                     <Link
-                      href='#'
-                      variant='subtitle1'
+                      to={item.url}
                       className={classes.footerText}
+                      // variant='button'
+                      // href={`${item.url}`}
+                      // sx={{ my: 1, mx: 1.5 }}
                     >
                       <Icon className={classes.iconStyle}>{item.icon}</Icon>{" "}
                       {item.name}

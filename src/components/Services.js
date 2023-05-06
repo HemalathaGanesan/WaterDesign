@@ -23,13 +23,15 @@ const tiers = [
     we offer multiple design to check the pipe designs`,
     buttonText: "Read More",
     image: img2,
+    url: "service",
   },
   {
-    title: "Industries",
+    title: "Vision & Mission",
     description: `We offer multiple services that gives max level approach to the users who can get the most benifits out of it.
     we offer multiple design to check the pipe designs`,
     buttonText: "Read More",
     image: img4,
+    url: "vision",
   },
   {
     title: "About us",
@@ -37,21 +39,24 @@ const tiers = [
     we offer multiple design to check the pipe designs`,
     buttonText: "Read More",
     image: img3,
+    url: "aboutus",
   },
-  {
-    title: "About us",
-    description: `We offer multiple services that gives max level approach to the users who can get the most benifits out of it.
-    we offer multiple design to check the pipe designs`,
-    buttonText: "Read More",
-    image: img2,
-  },
-  {
-    title: "About us",
-    description: `We offer multiple services that gives max level approach to the users who can get the most benifits out of it.
-    we offer multiple design to check the pipe designs`,
-    buttonText: "Read More",
-    image: img1,
-  },
+  // {
+  //   title: "About us",
+  //   description: `We offer multiple services that gives max level approach to the users who can get the most benifits out of it.
+  //   we offer multiple design to check the pipe designs`,
+  //   buttonText: "Read More",
+  //   image: img2,
+  //   url: "service",
+  // },
+  // {
+  //   title: "About us",
+  //   description: `We offer multiple services that gives max level approach to the users who can get the most benifits out of it.
+  //   we offer multiple design to check the pipe designs`,
+  //   buttonText: "Read More",
+  //   image: img1,
+  //   url: "service",
+  // },
 ];
 
 const Services = () => {
@@ -100,10 +105,7 @@ const Services = () => {
                     mb: 2,
                   }}
                 >
-                  <Typography
-                    variant='subtitle1'
-                    // align='center'
-                  >
+                  <Typography variant='subtitle1'>
                     {tier.description}
                   </Typography>
                 </Box>
@@ -113,7 +115,7 @@ const Services = () => {
                 <Button
                   fullWidth
                   onClick={() => {
-                    navigate("service");
+                    navigate(`${tier.url}`);
                   }}
                 >
                   {tier.buttonText} <ArrowRightAlt />

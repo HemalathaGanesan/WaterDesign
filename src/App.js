@@ -7,6 +7,9 @@ import Services from "./components/Services";
 import Footer from "./components/Footer";
 import Copyright from "./components/Copyright";
 import ServicesPage from "./pages/ServicesPage";
+import Contact from "./pages/Contact";
+import AboutUs from "./pages/About";
+import Vision from "./pages/vision";
 
 function App() {
   const counter = {
@@ -33,15 +36,16 @@ function App() {
               <React.Fragment>
                 {" "}
                 <Description />
+                <Services />
               </React.Fragment>
             }
           ></Route>
-
-          {/* <Route path='service' element={<ServicesPage />}></Route> */}
+          <Route path='service' element={<ServicesPage />}></Route>
+          <Route path='contact' element={<Contact />}></Route>
+          <Route path='aboutus' element={<AboutUs />}></Route>
+          <Route path='vision' element={<Vision />}></Route>
         </Routes>
-        <Services />
         <Footer />
-        {/* <Copyright /> */}
       </React.Fragment>
     </BrowserRouter>
   );

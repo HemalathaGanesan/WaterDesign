@@ -6,26 +6,26 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Box from "@material-ui/core/Box";
 import { CardHeader } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
-import image1 from "../assets/images/service-1.jpg";
-import image2 from "../assets/images/service-2.jpg";
+import image1 from "../assets/images/water.jpg";
+import image2 from "../assets/images/vision.jpg";
 import useStyles from "../components/ui/Style";
 
-const ServicesPage = () => {
+const Vision = () => {
   const classes = useStyles();
   return (
     <Container maxWidth='lg' component='main' className={classes.service}>
-      <Typography
+      {/* <Typography
         component='h1'
         variant='h4'
         className={classes.aboutTitle}
         style={{ textAlign: "center" }}
       >
         Services
-      </Typography>
-      <div className={classes.servicePageDiv}>
+      </Typography> */}
+      <div className={classes.servicePageDiv} style={{ height: "52.5vh" }}>
         <Card className={classes.servicePageCard}>
           <CardMedia style={{ height: 200, width: 400 }} image={image1} />
-          <CardHeader title='DESIGN BASIS REPORT' />
+          <CardHeader title='VISION' />
           <CardContent className={classes.servicePageCard}>
             <Box
               sx={{
@@ -37,15 +37,15 @@ const ServicesPage = () => {
               }}
             >
               <Typography variant='subtitle1'>
-                Cost-feasibility analysis compares total cost to available. no
-                direct assessment of effectiveness.
+                To be the first choice of go-to consultant for Design and
+                Engineering solutions
               </Typography>
             </Box>
           </CardContent>
         </Card>
         <Card className={classes.servicePageCard}>
           <CardMedia style={{ height: 200, width: 400 }} image={image2} />
-          <CardHeader title=' TECHNICAL SPECIFICATIONS' />
+          <CardHeader title='MISSION' />
           <CardContent className={classes.servicePageCard}>
             <Box
               sx={{
@@ -57,8 +57,8 @@ const ServicesPage = () => {
               }}
             >
               <Typography variant='subtitle1'>
-                Cost-feasibility analysis compares total cost to available. no
-                direct assessment of effectiveness.
+                Provide customer centric cost-effective solutions through value
+                engineering.
               </Typography>
             </Box>
           </CardContent>
@@ -68,4 +68,4 @@ const ServicesPage = () => {
   );
 };
 
-export default ServicesPage;
+export default Vision;

@@ -3,36 +3,55 @@ export const MenuItem = [
     id: "home",
     path: "/",
     label: "Home",
+    show: true,
   },
   {
     id: "about",
     path: "/about",
     label: "About Us",
+    show: true,
   },
   {
     id: "services",
     path: "/services",
     label: "Services",
+    show: true,
+    children: [
+      { label: "Proposal Support", path: "/services/proposal" },
+      { label: "Design Engineering", path: "/services/design" },
+      {
+        label: "Treatment Plant Design",
+        path: "/services/treatment",
+      },
+      {
+        label: "Technical Documentation",
+        path: "/services/technical",
+      },
+    ],
   },
   {
     id: "projects",
     path: "/projects",
     label: "Projects",
+    show: true,
   },
   {
     id: "clients",
     path: "/clients",
     label: "Clients",
+    show: false,
   },
   {
     id: "blog",
     path: "/blog",
     label: "Blog",
+    show: false,
   },
   {
     id: "contact",
     path: "/contact",
     label: "Contact",
+    show: true,
   },
 ];
 
@@ -64,4 +83,32 @@ export const clients = [
   { name: "Watermax", src: "/images/watermax.png" },
   { name: "WKT Enviro Systems", src: "/images/wkt_enviro.png" },
   { name: "Hyma Engineers", src: "/images/hyma.png" },
+];
+
+export const servicesTypes = [
+  {
+    title: "Proposal Stage Support",
+    desc: "We assist clients during the tender and proposal stage by providing technical diagrams, preliminary calculations, and design documentation to ensure competitive and accurate submissions.",
+  },
+  {
+    title: "Technical Documentation",
+    desc: "Preparation of data sheets, detailed fabrication drawings, P&ID diagrams, design analysis reports, and complete engineering documentation.",
+  },
+  {
+    title: "Design & Detail Engineering",
+    desc: "Comprehensive design services for ETP, STP, WTP and High Pressure Systems.Our designs ensure regulatory compliance, performance optimization, and cost efficiency.",
+  },
+  {
+    title: "Site Survey & O&M Support",
+    desc: "We provide site surveys, engineering & construction guidance, and complete Operation & Maintenance (O&M) manuals to ensure smooth plant operation.",
+  },
+];
+
+export const whyUs = [
+  "45+ Successfully Delivered Projects",
+  "40+ Years Combined Expertise",
+  "Industry-Leading Clientele",
+  "End-to-End Engineering Solutions",
+  "Optimized & Cost-Effective Designs",
+  "Dedicated Technical Support",
 ];

@@ -68,9 +68,13 @@ export default function Footer() {
             {MenuItem.find((item) => item.children)?.children?.map(
               (child, index) => (
                 <li key={index}>
-                  <span className='hover:text-[#1B9CFC] cursor-pointer transition'>
-                    {child}
-                  </span>
+                  <Link
+                    key={child.path}
+                    href={child.path}
+                    className='hover:text-[#1B9CFC] cursor-pointer transition'
+                  >
+                    {child.label} 
+                  </Link>
                 </li>
               ),
             )}

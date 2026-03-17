@@ -26,6 +26,10 @@
   .text-secondary {
     color: var(--secondary);
   }
+
+  .bg-primary-gradient {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+  }
 }
 
 @theme inline {

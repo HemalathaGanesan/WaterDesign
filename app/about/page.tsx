@@ -25,7 +25,7 @@ export default function AboutPage() {
           fill
           className='object-cover'
         />
-        <div className='absolute inset-0 bg-primary/80'></div>
+        <div className='absolute inset-0 bg-black/80'></div>
 
         <div className='relative z-10 max-w-3xl px-6'>
           <h1 className='text-4xl md:text-5xl font-bold mb-6'>
@@ -68,7 +68,7 @@ export default function AboutPage() {
       {/* ================= VISION & MISSION ================= */}
       <section className='bg-lightBlue py-20'>
         <div className='max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12'>
-          <div className='bg-white p-10 rounded-2xl shadow-md'>
+          <div className='bg-white p-10 rounded-2xl shadow-md bg-gradient-to-b from-blue-50 via-white to-blue-50'>
             <h3 className='text-2xl font-semibold mb-4 text-primary'>
               Our Vision
             </h3>
@@ -79,8 +79,8 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className='bg-white p-10 rounded-2xl shadow-md'>
-            <h3 className='text-2xl font-semibold mb-4 text-primary'>
+          <div className='bg-white p-10 rounded-2xl shadow-md bg-gradient-to-b from-blue-50 via-white to-blue-50'>
+            <h3 className='text-2xl font-semibold mb-4 text-primary '>
               Our Mission
             </h3>
             <p className='text-gray-600 leading-relaxed'>
@@ -105,7 +105,7 @@ export default function AboutPage() {
           ].map((item, index) => (
             <div
               key={index}
-              className='bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition'
+              className='bg-white p-8 rounded-xl shadow-md hover:shadow-xl border-t-4 border-[#0A3D62] transition'
             >
               <h4 className='font-semibold text-lg text-primary mb-3'>
                 {item}
@@ -137,7 +137,7 @@ export default function AboutPage() {
             ].map((industry, i) => (
               <div
                 key={i}
-                className='bg-white p-6 rounded-xl shadow hover:shadow-lg transition'
+                className='bg-white p-6 rounded-xl shadow hover:shadow-lg border-3 border-[#0A3D62] transition'
               >
                 {industry}
               </div>
@@ -147,7 +147,7 @@ export default function AboutPage() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className='py-20 bg-gradient-to-r from-primary to-secondary text-white text-center'>
+      <section className='py-20 bg-primary-gradient text-white text-center'>
         <h2 className='text-3xl font-bold mb-6'>
           Partner With Us For Reliable Water Infrastructure Solutions
         </h2>

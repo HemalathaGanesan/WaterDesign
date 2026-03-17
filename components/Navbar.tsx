@@ -84,12 +84,19 @@ const Navbar = () => {
               <div className='grid grid-cols-4 gap-8 max-w-7xl mx-auto px-10 py-10'>
                 {MenuItem.find((item) => item.children)?.children?.map(
                   (child, index) => (
-                    <span
-                      key={index}
+                    // <span
+                    //   key={index}
+                    //   className='hover:text-[#0A3D62] cursor-pointer'
+                    // >
+                    //   {child.label}
+                    // </span>
+                    <Link
+                      key={child.path}
+                      href={child.path}
                       className='hover:text-[#0A3D62] cursor-pointer'
                     >
-                      {child}
-                    </span>
+                      {child.label}
+                    </Link>
                   ),
                 )}
               </div>
@@ -146,7 +153,9 @@ const Navbar = () => {
                         {item.children.map((child, index) => (
                           <span key={index} className='flex items-center'>
                             <AiOutlineArrowRight className='mr-2' size={13} />
-                            {child}
+                            <Link key={child.path} href={child.path}>
+                              {child.label}
+                            </Link>
                           </span>
                         ))}
                       </div>

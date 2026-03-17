@@ -1,8 +1,46 @@
 "use client";
 
-import { clients, HeroText, servicesTypes, whyUs } from "./constants";
+import Link from "next/link";
+import { clients, servicesTypes, whyUs } from "./constants";
 import Image from "next/image";
-import Footer from "./Footer";
+
+export const metadata = {
+  title:
+    "Water Design Engineering | WTP, STP, ETP Design & Engineering Experts",
+  description:
+    "Water Design Engineering provides expert design and detail engineering services for Water Treatment Plants (WTP), Sewage Treatment Plants (STP), Effluent Treatment Plants (ETP), and Hydraulic Pumping Systems (HPS). 45+ projects delivered with 40+ years of experience.",
+
+  keywords: [
+    "Water Treatment Plant Design",
+    "STP Design Services",
+    "ETP Engineering",
+    "Hydraulic Design Engineering",
+    "Wastewater Treatment Consultants",
+    "Water Design Engineering India",
+  ],
+
+  openGraph: {
+    title: "Water Design Engineering | Engineering Reliable Water Solutions",
+    description:
+      "Experts in WTP, STP, ETP and Hydraulic Engineering with 45+ projects delivered.",
+    url: "https://waterdesignengg.in/",
+    siteName: "Water Design Engineering",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Water Treatment Engineering",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+
+  alternates: {
+    canonical: "https://waterdesignengg.in/",
+  },
+};
 
 const LandingPage = () => {
   return (
@@ -25,18 +63,22 @@ const LandingPage = () => {
           {/* Content */}
           <div className='relative z-10 text-center px-6 max-w-4xl'>
             <h1 className='text-4xl md:text-6xl font-bold leading-tight mb-6'>
-              Engineering Reliable Water & Wastewater Treatment Solutions
+              Water & Wastewater Treatment Plant Design Experts
             </h1>
 
             <p className='text-lg md:text-xl mb-8'>
-              Design & Detail Engineering for ETP | STP | WTP | HPS with 40+
-              years of combined expertise and 45+ successful projects.
+              Specialized in WTP, STP, ETP & Hydraulic Systems with 40+ years of
+              engineering expertise and 45+ successfully delivered projects
+              across industrial and municipal sectors.
             </p>
 
             <div className='flex flex-col md:flex-row gap-4 justify-center'>
-              <button className='bg-blue-700 hover:bg-blue-800 px-6 py-3 rounded-lg font-medium transition'>
-                Get a Consultation
-              </button>
+              <Link href='/contact'>
+                <button className='bg-blue-700 hover:bg-blue-800 px-6 py-3 rounded-lg'>
+                  Get a Consultation
+                </button>
+              </Link>
+
               <button className='border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition'>
                 Explore Services
               </button>
@@ -49,7 +91,7 @@ const LandingPage = () => {
           <div className='max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center'>
             <Image
               src='/images/enge-team.jpg'
-              alt='Water treatment engineering team reviewing plant design drawings'
+              alt='Engineers designing water treatment plant systems and reviewing technical drawings'
               width={800}
               height={600}
               className='rounded-xl shadow-lg object-cover w-full h-auto'
@@ -170,9 +212,11 @@ const LandingPage = () => {
               Looking for reliable engineering support for your water treatment
               project?
             </p>
-            <button className='bg-white text-blue-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition'>
-              Contact Us Today
-            </button>
+            <Link href='/contact'>
+              <button className='bg-white text-blue-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition'>
+                Contact Us Today
+              </button>
+            </Link>
           </div>
         </section>
       </div>

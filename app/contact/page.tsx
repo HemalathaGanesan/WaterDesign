@@ -21,7 +21,7 @@ const ContactPage = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: HTMLFormElement) => {
+  const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     alert("Form submitted! (Connect backend later)");
   };
@@ -145,7 +145,7 @@ const ContactPage = () => {
           {/* ===== MAP ===== */}
           <div className='mt-8'>
             <iframe
-              src='https://www.google.com/maps?q=Bangalore&output=embed'
+              src='https://www.google.com/maps?q=Basthi,Hosur&output=embed'
               width='100%'
               height='250'
               className='border rounded-lg'

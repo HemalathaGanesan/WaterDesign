@@ -30,6 +30,9 @@
   .bg-primary-gradient {
     background: linear-gradient(to right, var(--primary), var(--secondary));
   }
+  .bg-lightblue {
+    background-color: var(--lightBlue);
+  }
 }
 
 @theme inline {

@@ -79,9 +79,11 @@ const LandingPage = () => {
                 </button>
               </Link>
 
-              <button className='border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition'>
-                Explore Services
-              </button>
+              <Link href='/services/proposal'>
+                <button className='border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition'>
+                  Explore Services
+                </button>
+              </Link>
             </div>
           </div>
         </section>
@@ -111,9 +113,11 @@ const LandingPage = () => {
                 fabrication drawings, and end-to-end project support for
                 industrial and environmental applications.
               </p>
-              <button className='mt-4 bg-blue-700 text-white px-5 py-3 rounded-lg hover:bg-blue-800 transition'>
-                Learn More
-              </button>
+              <Link href='/about'>
+                <button className='mt-4 bg-blue-700 text-white px-5 py-3 rounded-lg hover:bg-blue-800 transition'>
+                  Learn More
+                </button>
+              </Link>
             </div>
           </div>
         </section>

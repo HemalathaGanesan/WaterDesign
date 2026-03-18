@@ -41,12 +41,12 @@ export const MenuItem = [
     label: "Clients",
     show: false,
   },
-  {
-    id: "blog",
-    path: "/blog",
-    label: "Blog",
-    show: false,
-  },
+  // {
+  //   id: "blog",
+  //   path: "/blog",
+  //   label: "Blog",
+  //   show: false,
+  // },
   {
     id: "contact",
     path: "/contact",

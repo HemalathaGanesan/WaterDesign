@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   AiOutlineClose,
   AiOutlineFacebook,
@@ -19,12 +20,17 @@ import {
 import { MenuItem } from "./constants";
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [isServiceOpen, setIsServiceOpen] = useState(false);
 
   const hanldeServiceOpen = () => {
     setIsServiceOpen(!isServiceOpen);
   };
+
+  useEffect(() => {
+    setIsServiceOpen(false);
+  }, [pathname]);
 
   const handleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -71,12 +77,12 @@ const Navbar = () => {
           )}
 
           {/* CTA */}
-          <Link
+          {/* <Link
             href='/contact'
             className='ml-4 bg-[#0A3D62] text-white px-5 py-2 rounded-md hover:bg-[#072c47] transition'
           >
             Get a Quote
-          </Link>
+          </Link> */}
         </nav>
         {isServiceOpen && (
           <div className='absolute left-0 top-full w-full bg-white shadow-xl border-t border-gray-500'>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { clients } from "@/components/constants";
+
 export const metadata = {
   title: "Our Clients | Water Design Engineering",
   description:

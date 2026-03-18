@@ -21,6 +21,10 @@ const ContactPage = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  const handleTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setForm({ ...form, message: e.target.value });
+  };
+
   const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     alert("Form submitted! (Connect backend later)");
@@ -71,7 +75,7 @@ const ContactPage = () => {
               className='w-full border p-3 rounded-md'
             />
 
-            <select
+            {/* <select
               name='service'
               onChange={handleChange}
               className='w-full border p-2 rounded-md'
@@ -81,13 +85,13 @@ const ContactPage = () => {
               <option>Design Engineering</option>
               <option>WTP / STP / ETP Design</option>
               <option>Technical Documentation</option>
-            </select>
+            </select> */}
 
             <textarea
               name='message'
               placeholder='Tell us about your project'
               rows={4}
-              onChange={handleChange}
+              onChange={handleTextAreaChange}
               className='w-full border p-3 rounded-md'
             ></textarea>
 
